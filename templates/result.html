@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Short URL</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>URL Shortened Successfully!</h1>
+
+        <p>
+            <strong>Original URL:</strong>
+        </p>
+
+        <p class="original-url">
+            {{ original_url }}
+        </p>
+
+        <p>
+            <strong>Short URL:</strong>
+        </p>
+
+        <a class="short-url"
+           href="{{ short_url }}"
+           target="_blank">
+            {{ short_url }}
+        </a>
+
+        <br><br>
+
+        <a href="/" class="back-button">
+            Shorten Another URL
+        </a>
+
+    </div>
+
+</body>
+
+</html>
